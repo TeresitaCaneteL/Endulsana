@@ -1,0 +1,75 @@
+// Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap/functions";
+
+
+// Include remainder of required Bootstrap stylesheets
+@import "bootstrap/variables";
+@import "bootstrap/variables-dark";
+@import "bootstrap/maps";
+@import "bootstrap/mixins";
+@import "bootstrap/helpers";
+//@import "bootstrap/root";
+
+
+@import "bootstrap/utilities";
+// Include any optional Bootstrap components as you like
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/helpers";
+@import "bootstrap/carousel";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/buttons";
+@import "bootstrap/offcanvas";
+@import "bootstrap/close";
+@import "bootstrap/accordion";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/card";
+@import "bootstrap/transitions";
+@import "bootstrap/forms";
+@import "bootstrap/tooltip";
+@import "bootstrap/pagination";
+@import "bootstrap/modal";
+// Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "bootstrap/utilities/api";
+
+// Add additional custom code here
+// Local docs variables
+// Local docs variables
+$bd-purple: #563d7c;
+$bd-orange: #c30;
+$bd-dark: #2a2730;
+$bd-download: #ffe484;
+$bd-info: #5bc0de;
+$bd-warning: #f0ad4e;
+$bd-danger: #c00;
+$bd-purple-bright: lighten(saturate($bd-purple, 5%), 45%); // stylelint-disable-line function-disallowed-list
+$bd-purple-light: lighten(saturate($bd-purple, 5%), 15%); // stylelint-disable-line function-disallowed-list
+$bd-orange-bright: lighten(saturate($bd-orange, 5%), 20%);
+$bd-orange-light: lighten(saturate($bd-danger, 95%), 40%);
+
+
+    .btn-bd-primary {
+      font-weight: 600;
+      color: $white;
+      background-color: $bd-orange-bright;
+      border-color: $bd-orange-light;
+
+
+      &:hover,
+      &:active {
+        color: $white;
+        background-color: shade-color($bd-orange-bright, 50%);
+        border-color: shade-color($bd-orange-bright, 50%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba($bd-orange-bright, .25);
+      }
+    }
